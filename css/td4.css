@@ -1,0 +1,175 @@
+.canvas {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.relative {
+    position: relative;
+}
+.hide {
+    display: none;
+}
+
+html , body {
+    margin: 0;
+}
+
+#error {
+    z-index: 998;
+    top: 0;
+    left: 0;
+}
+
+.header {
+    font-size: xx-large;
+    background-color: rgba(150, 150, 150, 0.5);
+    grid-area: header;
+    text-align: center;
+    user-select: none;
+}
+
+.tower-image {
+    width: 32px;
+    height: 32px;
+}
+
+.singleTower {
+    background-color: rgba(150, 150, 150, 0.5);
+    width: 100%;
+    height: 250px;
+    word-wrap: break-word;
+    display: grid;
+    grid-template: 
+    "name name name"
+    "img now next"
+    "tech now next";
+}
+
+.tower-title {
+    grid-area: name;
+}
+
+.tower-img {
+    grid-area: img;
+    padding: 3px;
+}
+.tower-now {
+    grid-area: now;
+}
+.tower-next {
+    grid-area: next;
+}
+
+.grid4 {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.grid1 {
+    display: grid;
+    grid-row-gap: 3px;
+    text-align: center;
+}
+
+.grid2 {
+    display: grid;
+    grid-row-gap: 3px;
+    text-align: center;
+}
+
+#info, #towerInfo {
+    display: none;
+    position: absolute;
+    
+    grid-template: 
+    "header header header"
+    "body body body"
+    "body body body";
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+}
+
+#towerStuff {
+    display: contents;
+}
+
+#messageDialog {
+    display: none;
+    position: absolute;
+    background-color: gray;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin: auto;
+}
+
+.gray {
+    color: gray;
+}
+
+button {
+    user-select: none;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 6px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  height: 100px;
+  overflow: auto;
+  position: absolute;
+  background-color: #f9f9f9;
+  /*min-width: 180px;*/
+  min-width: 25%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.dropdown-content a img {
+    padding: 8px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: white;
+}
+

@@ -1,0 +1,3 @@
+window.aiUnitList = {
+    tremaux : "default"
+};

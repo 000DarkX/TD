@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="17" height="17" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="38">
+ <editorsettings>
+  <export target="ZigZag.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" source="../data/tilesetNew.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="17" height="17">
+  <data encoding="csv">
+20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,
+20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,
+20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,
+20,20,20,19,19,19,20,19,19,19,20,19,19,19,20,20,20,
+20,20,20,19,20,19,19,19,20,19,19,19,20,19,20,20,20,
+20,20,20,19,19,19,20,19,19,19,20,19,19,19,20,20,20,
+20,20,20,20,19,20,20,20,19,20,20,20,19,20,20,20,20,
+20,20,20,19,19,19,20,19,19,19,20,19,19,19,20,20,20,
+20,20,20,19,20,19,19,19,20,19,19,19,20,19,20,20,20,
+20,20,20,19,19,19,20,19,19,19,20,19,19,19,20,20,20,
+20,20,20,20,19,20,20,20,19,20,20,20,19,20,20,20,20,
+20,20,20,19,19,19,20,19,19,19,20,19,19,19,20,20,20,
+20,20,20,19,20,19,19,19,20,19,19,19,20,19,20,20,20,
+20,20,20,19,19,19,20,19,19,19,20,19,19,19,20,20,20,
+20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,
+20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,
+20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20
+</data>
+ </layer>
+ <objectgroup id="2" name="Object Layer 1">
+  <object id="1" name="blue,1" type="blue,1" gid="35" x="98.6133" y="129.081" width="32" height="32"/>
+  <object id="2" name="red,1" type="red,1" gid="36" x="416.48" y="448.747" width="32" height="32"/>
+  <object id="21" gid="33" x="414" y="386" width="32" height="32"/>
+  <object id="22" gid="32" x="353" y="387" width="32" height="32"/>
+  <object id="23" gid="29" x="355" y="449" width="32" height="32"/>
+  <object id="24" gid="30" x="417" y="448" width="32" height="32"/>
+  <object id="25" gid="30" x="383" y="383" width="32" height="32"/>
+  <object id="26" gid="29" x="385" y="320" width="32" height="32"/>
+  <object id="27" gid="30" x="417" y="320" width="32" height="32"/>
+  <object id="28" gid="33" x="415" y="257" width="32" height="32"/>
+  <object id="29" gid="32" x="352" y="258" width="32" height="32"/>
+  <object id="30" gid="29" x="355" y="319" width="32" height="32"/>
+  <object id="31" gid="30" x="384" y="255" width="32" height="32"/>
+  <object id="32" gid="29" x="384" y="193" width="32" height="32"/>
+  <object id="33" gid="30" x="417" y="192" width="32" height="32"/>
+  <object id="34" gid="33" x="415" y="129" width="32" height="32"/>
+  <object id="35" gid="32" x="352" y="129" width="32" height="32"/>
+  <object id="36" gid="29" x="354" y="192" width="32" height="32"/>
+  <object id="37" gid="32" x="384" y="194" width="32" height="32"/>
+ </objectgroup>
+</map>

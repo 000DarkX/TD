@@ -1,0 +1,160 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.hide {
+    display: none;
+}
+
+.main {
+    display: grid;
+    grid-template: 
+    "header header header"
+    "background background foreground"
+    "background background foreground";
+}
+
+canvas {
+    border: 1px ridge goldenrod;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header {
+    grid-area: header;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 5%;
+}
+
+.info {
+    font-size: 14px;
+}
+
+.background {
+    grid-area: background;
+    z-index: 0;
+    position: relative;
+    /*width: 75%;
+    height: 95%;*/
+}
+
+.foreground {
+    grid-area: foreground;
+    z-index: 1;
+    position: absolute;
+    top: 5%;
+    left: 75%;
+    width: 25%;
+    max-width: 25%;
+    max-height: 95%;
+    min-height: 95%;
+    height: 95%;
+    overflow: auto;
+    /*width: 25%;
+    height: 95%;*/
+}
+
+.margin {
+    margin: 5px;
+}
+
+
+.text {
+    text-align: center;
+    color: gold;
+}
+
+.teams {
+    color: black;
+    background-color: silver;
+    border-bottom: 1px solid black;
+    min-width: 100%;
+}
+
+.towerStuff {
+    display: flex;
+}
+
+.tower {
+    overflow: auto;
+    display: block;
+    background-color: silver;
+    border-bottom: 1px solid black;
+    max-height: 350px;
+    max-width: 100%;
+    width: 100%;
+    /*height: 25%;*/
+}
+
+.singleTower {
+    width: 100%;
+    height: 250px;
+    word-wrap: break-word;
+    border: 1px solid black;
+    display: grid;
+    grid-template: 
+    "name name name"
+    "img now next"
+    "tech now next";
+}
+
+.tower-title {
+    grid-area: name;
+}
+
+.tower-img {
+    grid-area: img;
+    padding: 3px;
+}
+.tower-now {
+    grid-area: now;
+}
+.tower-next {
+    grid-area: next;
+}
+
+.enemies {
+    background-color: silver;
+}
+
+#gameMaps {
+    margin-bottom: 5px;
+}
+
+#towerInfo {
+    overflow: auto;
+    max-height: 200px;
+    height: 100%;
+    min-width: 70%;
+}
+
+.grid1 {
+    display: grid;
+    grid-row-gap: 3px;
+    text-align: center;
+}
+
+.grid2 {
+    display: grid;
+    grid-row-gap: 3px;
+    text-align: center;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.grid4 {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#messageDialog {
+    z-index: 99999;
+}
