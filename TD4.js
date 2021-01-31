@@ -56,6 +56,7 @@ class TowerDefenseV4 {
         // OTHER
         this.loader    = null;
         this.loaded    = false;
+        this.lastTap   = 0;
         this.mouse     = {};
         this.clearBackground = 1;
         this.clearTowers     = 1;
@@ -185,7 +186,7 @@ class TowerDefenseV4 {
 
             if (new Date().getTime() - this.lastTap <= 1000) {
                 this.showInfo();
-                this.lastTap = undefined;
+                this.lastTap = new Date().getTime();
             } else {
                 this.lastTap = new Date().getTime();
             }
