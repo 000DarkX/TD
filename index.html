@@ -281,8 +281,9 @@
 <script src="js/Unit.js"></script>
 <script src="TD4.js"></script>
 <script>
+    let td = undefined;
     try {
-        const td = new TowerDefenseV4();
+        td = new TowerDefenseV4();
         (async () => {
             await td.start();
         })();
