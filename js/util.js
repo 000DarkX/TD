@@ -3,6 +3,7 @@ function on_error(msg) {
         document.getElementById("error").children[0].remove();
     }
     document.getElementById("error").innerHTML += msg +"<br>";
+    document.getElementById("error").style.display = "block";
 }
 
 

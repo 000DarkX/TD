@@ -4,7 +4,6 @@ class Tower extends InGameObject {
     //static towers = 0;
 
     constructor(base) {
-        on_error("Tower");
         super();
         this.level  = 1;
         this.trait = [];

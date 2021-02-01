@@ -117,6 +117,7 @@
 </div>
 
 <script>
+    try {
     async function nextRound() {
         td.hideInfo();
         await td.nextRound();
@@ -264,6 +265,9 @@
             break;
         }
     }
+} catch (e) {
+    on_error(e);
+}
 </script>
 
 
@@ -277,8 +281,12 @@
 <script src="js/Unit.js"></script>
 <script src="TD4.js"></script>
 <script>
-    const td = new TowerDefenseV4();
-    (async () => {
-        await td.start();
-    })();
+    try {
+        const td = new TowerDefenseV4();
+        (async () => {
+            await td.start();
+        })();
+    } catch (e) {
+        on_error(e);
+    }
 </script>

@@ -537,7 +537,7 @@ class TowerDefenseV4 {
 
         const x = this.mouse.offsetX;
         const y = this.mouse.offsetY;
-        on_error(`${x} ${y} ${this.xyToMXY(x, y)}`)
+
         let result = this.build(this.selectedTower, ...this.xyToMXY(x, y), this.team);
 
         if (result) {
@@ -591,9 +591,9 @@ class TowerDefenseV4 {
         let levelInfo = {};
         let showInfo = false;
 
-        on_error("_formtaTowerNow: " + `${title} ${element} ${tower} ${n} ${this.currentMap}`);
+    
         if (tower instanceof window.Tower) {
-            on_error("instance of tower");
+            
            levelInfo = tower.levels[tower.level-1+n];
            showInfo = true;
            if (n > 0) {
@@ -601,10 +601,10 @@ class TowerDefenseV4 {
                 tower.level = n + tower.level;
            }
         } else {
-            on_error(`no instance`);
+           
             tower  = Tower.makeTower(this.towers, tower.key);
             if (!tower) {
-                on_error("no tower");
+             
                 return false;
             }
             tower.level = n + 1;
@@ -612,7 +612,6 @@ class TowerDefenseV4 {
 
         }
 
-        on_error(`${tower} ${levelInfo}`)
 
         if (!tower || !levelInfo)
             return false;
@@ -911,7 +910,6 @@ class TowerDefenseV4 {
 
     // not working
     async startTutorial() {
-        on_error("Tutorial Started");
         this.switchMap(this.defaultMap);
 
             await this.sendMessage(`Welcome Defender to my kingdom! Since your new lets begin
@@ -1496,7 +1494,6 @@ class TowerDefenseV4 {
         const element = document.getElementById(`dropContentMaps`);
 
         if (!element) {
-            on_error("loadGameMaps - gameMaps not found")
             return false;
         }
 
@@ -1526,22 +1523,20 @@ class TowerDefenseV4 {
 
             element.appendChild(option);
 
-            on_error("Map: "+name);
         
             if (typeof(map[1]) == "string" && map[1].toLowerCase() == "default") {
                 option.selected = true;
                 const d = localStorage.getItem("TD-currentMap");
                 this.defaultMap = name;
 
-                on_error("default map: " + d + " " + name);
-                on_error(typeof(d));
+                
 
                 if (typeof(d) == "string" && d) {
-                    on_error("map list local: "+d);
+                    
                     await this.switchMap(d);
                 }
                 else {
-                    on_error("map list new: " + name);
+                    
                     await this.switchMap(name);
                 }
             } 
@@ -1549,7 +1544,6 @@ class TowerDefenseV4 {
             
         }
 
-        on_error("load game maps complete");
     }
 
     _loadTiles() {
@@ -1688,16 +1682,14 @@ class TowerDefenseV4 {
 
     async switchMap(name) {
         name = arguments[0];
-        on_error(JSON.stringify(arguments));
 
         if (name == undefined) {
-            on_error("name undefined: " + name);
             localStorage.removeItem("TD-currentMap");
             return false;
         }
 
         console.log("switching map: " + name);
-        on_error(`Switching Map: ${name}`);
+        
         this.currentMap = name;
         localStorage.setItem("TD-currentMap", this.currentMap);
         document.getElementById("gameMaps").value = this.currentMap;
