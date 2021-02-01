@@ -15,11 +15,9 @@ async function addScript(path) {
 
         let script = document.createElement("script");
         script.onload = () => {
-            on_error(`Script loaded: ${script.src}`);
             t(script.src);
         };
         script.onerror = () => {
-            on_error("script failed to load: " + path);
             f(false);
         }
         script.src = path;

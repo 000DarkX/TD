@@ -1892,10 +1892,7 @@ class TowerDefenseV4 {
         if (Object.keys(this.currentTeam(this.team).towers).length  >= this.maxTowers)
             return false;
 
-        if ((this.currentTeam(this.team).buildTypes[name] || 1) >= this.maxTowers)
-            return false;
-
-        if ((this.currentTeam(this.team).buildTypes[name] || 1) >= this.maxOfEach[name])
+        if ((this.currentTeam(this.team).buildTypes[name] || 0) >=  this.maxOfEach[name])
             return false;
 
         const tower = this.towers[name];

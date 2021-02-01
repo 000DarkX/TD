@@ -635,9 +635,10 @@ class Tower extends InGameObject {
         if (!teamInfo.buildTypes[this.key])
             teamInfo.buildTypes[this.key] = 0;
         
-        if (this.key == "tech" && teamInfo.buildTypes[this.key] > 0)
+        if (Object.keys(game.currentTeam(this.team).towers).length  >= game.maxTowers)
             return false;
-        else if (this.key == 'heart' && teamInfo.buildTypes[this.key] >= 2)
+
+        if ((game.currentTeam(this.team).buildTypes[this.key] || 0) >=  game.maxOfEach[this.key])
             return false;
 
         const cost = free ? 0 : this.buildCost(teamInfo);
