@@ -56,6 +56,7 @@ class TowerDefenseV4 {
         // OTHER
         this.loader    = null;
         this.loaded    = false;
+        this.drawComplete = true;
         this.lastTap   = 0;
         this.mouse     = {};
         this.clearBackground = 1;
@@ -1150,13 +1151,17 @@ class TowerDefenseV4 {
             this._drawGrid(this.backgroundCtx, "gray");
 
         //this._drawDebug(this.otherCtx);
+        this.drawComplete = true;
     }
 
     async mainEvent() {
         const mapper = window[`map${this.currentMap}`];
 
         // draw here
-        requestAnimationFrame(this.draw.bind(this));
+        if (this.drawComplete) {
+            this.drawComplete = false;
+            requestAnimationFrame(this.draw.bind(this));
+        }
 
         // update here
         if (this.currentUnits >= this.totalUnits) {
@@ -1895,10 +1900,10 @@ class TowerDefenseV4 {
         if (Object.keys(this.currentTeam(this.team).towers).length  >= this.maxTowers)
             return false;
 
-        if ((this.currentTeam(this.team).buildTypes[name] + 1 || 1) >= this.maxOfEach)
+        if ((this.currentTeam(this.team).buildTypes[name] || 1) >= this.maxTowers)
             return false;
 
-        if ((this.currentTeam(this.team).buildTypes[name] + 1 || 1) >= this.maxOfEach[name])
+        if ((this.currentTeam(this.team).buildTypes[name] || 1) >= this.maxOfEach[name])
             return false;
 
         const tower = this.towers[name];
