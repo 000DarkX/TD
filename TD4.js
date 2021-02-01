@@ -349,6 +349,7 @@ class TowerDefenseV4 {
 
         localStorage.setItem(`TD-${this.currentMap}-teamRed`, JSON.stringify(this.teamRed));
         localStorage.setItem(`TD-${this.currentMap}-roundAt`, this.roundAt);
+        this.sendMessage("Your progress has been saved");
     }
 
     load() {
